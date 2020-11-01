@@ -1,0 +1,22 @@
+<h1>Products</h1>
+
+<% if current_user && current_user.admin %>
+  <%= link_to "Create new product", products_path %>
+<% end %>
+
+<% if @most_reviewed_product.any?%>
+<%= link_to @most_reviewed_product.first.name, product_path(@most_reviewed_product.first)%></li>
+<% end %>
+
+<% if @products.any? %>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.name, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no products yet.</p>
+<% end %>
+
+
+
