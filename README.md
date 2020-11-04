@@ -11,7 +11,7 @@ This site has the functionality to review products and allows users to have CRUD
 ## Setup & Installation
 
 1. Open terminal and navigate to "cd Desktop"
-2. Clone repository with git clone "https://github.com/oswen138/volunteer-tracker.git master"
+2. Clone repository with git clone "https://github.com/oswen138/mario-food.git"
 3. Run gem install bundler and run bundle install in command line to download all dependencies
 4. Run tests in the command line with rspec
 5. Migrate database info with $ rake db:migrate
