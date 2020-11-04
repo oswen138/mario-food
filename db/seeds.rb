@@ -18,12 +18,10 @@ Review.destroy_all
         content_body: Faker::Lorem.characters(number: rand(50..250)),
         rating: Faker::Number.rand(1..5),
         product_id: product.id)
-    
-        1.times do |index|
-          user = User.create!(email: 'squirrels@gmail.com', password: 'squirrels', admin: false )
-          admin = User.create!(email: 'cat@gmail.com', password: 'cats12', admin: true)
-        end
     end
 end
 
-p "Created #{Product.count} products and #{Review.count} reviews"
+3.times do |index|
+  user = User.create!(email: 'squirrels@gmail.com', password: 'squirrels', admin: false )
+  admin = User.create!(email: 'cat@gmail.com', password: 'cats12', admin: true)
+end

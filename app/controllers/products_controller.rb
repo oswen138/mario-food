@@ -2,7 +2,8 @@ class ProductsController < ApplicationController
 
   before_action :only => [:new, :edit] do
     redirect_to new_user_session_path unless current_user && current_user.admin
-
+ end
+ 
   def index
     @products = Product.all
     @recent_products = Product.three_most_recent
@@ -60,5 +61,4 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:name, :cost, :country_of_origin)
     end
-  end
-end
+ end
